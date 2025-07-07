@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <stdexec/execution.hpp>
 
-#include <iomisc/dummy.hpp>
+import iomisc;
 
 TEST(Tmp, Tmp) {
   stdexec::sender auto future = stdexec::just(3) | stdexec::then([](int x) {

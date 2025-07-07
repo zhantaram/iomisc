@@ -4,10 +4,11 @@ project(iomisc LANGUAGES CXX)
 
 #------------------------------------------------------------------------------
 # Library target
-add_library(${PROJECT_NAME}
-  src/dummy.cpp
+add_library(${PROJECT_NAME})
+target_sources(${PROJECT_NAME}
+PUBLIC FILE_SET modules TYPE CXX_MODULES FILES
+  src/lib.cppm
 )
-target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
 
 #------------------------------------------------------------------------------

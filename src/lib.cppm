@@ -1,10 +1,11 @@
-#include "iomisc/dummy.hpp"
+// -*- C++ -*-
 
-#include <print>
+export module iomisc;
+import std;
 
 namespace iomisc {
 
-  void hello_world() {
+  export void hello_world() {
     std::println("Hello, World!");
   }
 
